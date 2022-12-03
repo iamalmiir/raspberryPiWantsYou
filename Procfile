@@ -1,1 +1,1 @@
-release: python main.py
+release: python3 main.py
