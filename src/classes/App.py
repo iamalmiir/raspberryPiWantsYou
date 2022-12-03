@@ -24,7 +24,7 @@ class App:
     # Send email to notify user
     def send_email(self) -> None:
         subject = "Raspberry Pi is Back in Stock!"
-        body = f"Hey {self.greeting_name}, \n\nRaspberry Pi is back in stock and it wants you to get it!"
+        body = f"Hey {self.greeting_name}, \n\nRaspberry Pi is back in stock at Microcenter! \n\n{self.microcenter_url}"
         payload = {
             "personalizations": [{"to": [{"email": self.email_receiver}], "subject": subject}],
             "from": {"email": self.sender_email},
@@ -56,4 +56,5 @@ class App:
                 break
             else:
                 print("Going to sleep for 1 hour...")
+                self.send_email()
                 sleep(3600)
