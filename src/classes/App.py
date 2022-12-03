@@ -56,5 +56,4 @@ class App:
                 break
             else:
                 print("Going to sleep for 1 hour...")
-                self.send_email()
                 sleep(3600)
